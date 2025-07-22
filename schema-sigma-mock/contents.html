@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigma</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<body class="contents-page">
+    <main>
+        <navbar>
+            <div class="navbar--wrapper">
+                <div class="navbar-links">
+                    <ul>
+                        <li>
+                            <a href="/index.html" class="home">
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_2028_1137" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0"
+                                        y="0" width="24" height="25">
+                                        <rect y="0.454346" width="24" height="24" fill="#1D334F" />
+                                    </mask>
+                                    <g mask="url(#mask0_2028_1137)">
+                                        <path
+                                            d="M4 21.4543V9.45435L12 3.45435L20 9.45435V21.4543H14V14.4543H10V21.4543H4Z"
+                                            fill="white" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="profile">
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_2028_1141" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0"
+                                        y="0" width="24" height="25">
+                                        <rect y="0.454346" width="24" height="24" fill="#D9D9D9" />
+                                    </mask>
+                                    <g mask="url(#mask0_2028_1141)">
+                                        <path
+                                            d="M5.85 17.5543C6.7 16.9043 7.65 16.3918 8.7 16.0168C9.75 15.6418 10.85 15.4543 12 15.4543C13.15 15.4543 14.25 15.6418 15.3 16.0168C16.35 16.3918 17.3 16.9043 18.15 17.5543C18.7333 16.871 19.1875 16.096 19.5125 15.2293C19.8375 14.3627 20 13.4377 20 12.4543C20 10.2377 19.2208 8.35018 17.6625 6.79185C16.1042 5.23351 14.2167 4.45435 12 4.45435C9.78333 4.45435 7.89583 5.23351 6.3375 6.79185C4.77917 8.35018 4 10.2377 4 12.4543C4 13.4377 4.1625 14.3627 4.4875 15.2293C4.8125 16.096 5.26667 16.871 5.85 17.5543ZM12 13.4543C11.0167 13.4543 10.1875 13.1168 9.5125 12.4418C8.8375 11.7668 8.5 10.9377 8.5 9.95435C8.5 8.97101 8.8375 8.14185 9.5125 7.46685C10.1875 6.79185 11.0167 6.45435 12 6.45435C12.9833 6.45435 13.8125 6.79185 14.4875 7.46685C15.1625 8.14185 15.5 8.97101 15.5 9.95435C15.5 10.9377 15.1625 11.7668 14.4875 12.4418C13.8125 13.1168 12.9833 13.4543 12 13.4543ZM12 22.4543C10.6167 22.4543 9.31667 22.1918 8.1 21.6668C6.88333 21.1418 5.825 20.4293 4.925 19.5293C4.025 18.6293 3.3125 17.571 2.7875 16.3543C2.2625 15.1377 2 13.8377 2 12.4543C2 11.071 2.2625 9.77101 2.7875 8.55435C3.3125 7.33768 4.025 6.27935 4.925 5.37935C5.825 4.47935 6.88333 3.76685 8.1 3.24185C9.31667 2.71685 10.6167 2.45435 12 2.45435C13.3833 2.45435 14.6833 2.71685 15.9 3.24185C17.1167 3.76685 18.175 4.47935 19.075 5.37935C19.975 6.27935 20.6875 7.33768 21.2125 8.55435C21.7375 9.77101 22 11.071 22 12.4543C22 13.8377 21.7375 15.1377 21.2125 16.3543C20.6875 17.571 19.975 18.6293 19.075 19.5293C18.175 20.4293 17.1167 21.1418 15.9 21.6668C14.6833 22.1918 13.3833 22.4543 12 22.4543Z"
+                                            fill="white" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="close">
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_2028_1145" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0"
+                                        y="0" width="24" height="25">
+                                        <rect y="0.454346" width="24" height="24" fill="#D9D9D9" />
+                                    </mask>
+                                    <g mask="url(#mask0_2028_1145)">
+                                        <path
+                                            d="M9.575 12.4543L5 7.85435L6.4 6.45435L12.4 12.4543L6.4 18.4543L5 17.0543L9.575 12.4543ZM16.175 12.4543L11.6 7.85435L13 6.45435L19 12.4543L13 18.4543L11.6 17.0543L16.175 12.4543Z"
+                                            fill="white" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="navbar--logo">
+                        <img src="./assets/logo-white.png" alt="Sigma Logo">
+                    </div>
+                </div>
+                <div class="search">
+                    <div class="search--wrapper">
+                        <input type="text" placeholder="Search">
+                        <button class="search-button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_2028_1131" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0"
+                                    y="0" width="24" height="24">
+                                    <rect width="24" height="24" fill="#3A679F" />
+                                </mask>
+                                <g mask="url(#mask0_2028_1131)">
+                                    <path
+                                        d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z"
+                                        fill="#3A679F" />
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </navbar>
+        <div class="container">
+            <div class="sidebar">
+                <div class="sidebar--wrapper">
+                    <h1>Table of contents</h1>
+                    <ul>
+                        <li><a href="#" data-content="glossary" class="active">Glossary</a></li>
+                        <li><a href="#" data-content="safety-instructions">Safety Instructions</a></li>
+                        <li class="has-submenu">
+                            <a href="#" data-content="sigma-system">SIGMA System
+                                <svg width="11" height="15" viewBox="0 0 11 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.03094 14.9999L10.0909 7.93893L3.03094 0.87793L0.908936 2.99993L5.84894 7.93893L0.908936 12.8779L3.03094 14.9999Z"
+                                        fill="black" />
+                                </svg>
+                            </a>
+                            <ul>
+                                <li><a href="#" data-content="general-description">General Description</a></li>
+                                <li><a href="#" data-content="sigma-deployment-fire-mission">Deployment & Fire
+                                        Mission</a>
+                                </li>
+                                <li><a href="#" data-content="sigma-cab-system-fire-functions">Cab System And Fire
+                                        Functions</a></li>
+                                <li><a href="#" data-content="sigma-operational-control-systems">Operational & Control
+                                        Systems</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" data-content="crew-members">Crew Members</a></li>
+                        <li><a href="#" data-content="sigma-operational-procedures">SIGMA Operational Procedures</a>
+                        </li>
+                        <li><a href="#" data-content="sigma-operator-level-maintenance">SIGMA Operator Level
+                                Maintenance</a>
+                        </li>
+                        <li><a href="#" data-content="sigma-technician-level-maintenance">SIGMA Technician Level
+                                Maintenance</a></li>
+                        <li><a href="#" data-content="manual-backups-troubleshooting">Manual Backups &
+                                Troubleshooting</a>
+                        </li>
+                        <li><a href="#" data-content="sigma-fcs-operation">SIGMA FCS Operation</a></li>
+                        <li><a href="#" data-content="catalog">Catalog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="main-content--wrapper">
+                    <div class="actionbar">
+                        <div class="actionbar--wrapper">
+                            <div class="breadcrumbs">
+                                <div class="breadcrumbs--wrapper">
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <div class="actions--wrapper">
+                                    <div class="buttons-wrapper">
+                                        <button class="show-both">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <mask id="mask0_2028_1107" style="mask-type:alpha"
+                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </mask>
+                                                <g mask="url(#mask0_2028_1107)">
+                                                    <path d="M14 19V5H18V19H14ZM6 19V5H10V19H6Z" fill="white" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <button class="hide-image">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <mask id="mask0_2028_1110" style="mask-type:alpha"
+                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </mask>
+                                                <g mask="url(#mask0_2028_1110)">
+                                                    <path d="M3 18V16H15V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z"
+                                                        fill="white" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <button class="hide-text">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <mask id="mask0_2028_1120" style="mask-type:alpha"
+                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                                    <rect width="24" height="24" fill="#D9D9D9" />
+                                                </mask>
+                                                <g mask="url(#mask0_2028_1120)">
+                                                    <path
+                                                        d="M5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H19C19.55 3 20.0208 3.19583 20.4125 3.5875C20.8042 3.97917 21 4.45 21 5V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM6 17H18L14.25 12L11.25 16L9 13L6 17Z"
+                                                        fill="white" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="buttons-wrapper">
+                                        <button class="print">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <mask id="mask0_2028_1117" style="mask-type:alpha"
+                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                                    <rect width="24" height="24" fill="#D9D9D9" />
+                                                </mask>
+                                                <g mask="url(#mask0_2028_1117)">
+                                                    <path
+                                                        d="M18 7H6V3H18V7ZM18 12.5C18.2833 12.5 18.5208 12.4042 18.7125 12.2125C18.9042 12.0208 19 11.7833 19 11.5C19 11.2167 18.9042 10.9792 18.7125 10.7875C18.5208 10.5958 18.2833 10.5 18 10.5C17.7167 10.5 17.4792 10.5958 17.2875 10.7875C17.0958 10.9792 17 11.2167 17 11.5C17 11.7833 17.0958 12.0208 17.2875 12.2125C17.4792 12.4042 17.7167 12.5 18 12.5ZM16 19V15H8V19H16ZM18 21H6V17H2V11C2 10.15 2.29167 9.4375 2.875 8.8625C3.45833 8.2875 4.16667 8 5 8H19C19.85 8 20.5625 8.2875 21.1375 8.8625C21.7125 9.4375 22 10.15 22 11V17H18V21Z"
+                                                        fill="white" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <button class="download">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <mask id="mask0_2028_1120" style="mask-type:alpha"
+                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                                    <rect width="24" height="24" fill="#D9D9D9" />
+                                                </mask>
+                                                <g mask="url(#mask0_2028_1120)">
+                                                    <path
+                                                        d="M5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H19C19.55 3 20.0208 3.19583 20.4125 3.5875C20.8042 3.97917 21 4.45 21 5V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM6 17H18L14.25 12L11.25 16L9 13L6 17Z"
+                                                        fill="white" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <button class="video">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.5">
+                                                    <mask id="mask0_2028_1123" style="mask-type:alpha"
+                                                        maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                                        <rect width="16" height="16" fill="#D9D9D9" />
+                                                    </mask>
+                                                    <g mask="url(#mask0_2028_1123)">
+                                                        <path
+                                                            d="M3.99992 10.6667H9.33325V8.53341L11.9999 10.6667V5.33341L9.33325 7.46675V5.33341H3.99992V10.6667ZM2.66659 13.3334C2.29992 13.3334 1.98603 13.2029 1.72492 12.9417C1.46381 12.6806 1.33325 12.3667 1.33325 12.0001V4.00008C1.33325 3.63341 1.46381 3.31953 1.72492 3.05841C1.98603 2.7973 2.29992 2.66675 2.66659 2.66675H13.3333C13.6999 2.66675 14.0138 2.7973 14.2749 3.05841C14.536 3.31953 14.6666 3.63341 14.6666 4.00008V12.0001C14.6666 12.3667 14.536 12.6806 14.2749 12.9417C14.0138 13.2029 13.6999 13.3334 13.3333 13.3334H2.66659Z"
+                                                            fill="white" />
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+                                        </button>
+                                        <button class="share">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.5">
+                                                    <rect x="3" y="3" width="10" height="10" fill="white" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content" data-content="catalog">
+                        <h1>Welcome to our 3D Model</h1>
+                        <div class="content-wrapper">
+                            <div class="content-container">
+                                <iframe
+                                    src="./assets/TestFilesForSigma_Sigma-Step_WithMaterialsForRapidC_ToUseInRapidC_RAPIDCAT_12.htm"
+                                    data-src="./assets/TestFilesForSigma_Sigma-Step_WithMaterialsForRapidC_ToUseInRapidC_RAPIDCAT_12.htm"
+                                    width="100%" height="600"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content" data-content="general-description">
+                        <h1>General Description</h1>
+                        <div class="content-wrapper">
+                            <div class="table">
+                                <div class="table-wrapper">
+                                    <div class="table-row" data-part="cab">
+                                        <div class="table-row--title">Crew Cab:</div>
+                                        <div class="table-row--data"> 3 man crew operates Gun from cab. Aiming System
+                                            & C4i Interface.</div>
+                                    </div>
+                                    <div class="table-row" data-part="stablelizer">
+                                        <div class="table-row--title">Platform Stabilizers:</div>
+                                        <div class="table-row--data"> 4 Stabilizers support during firing.</div>
+                                    </div>
+                                    <div class="table-row" data-part="barrel">
+                                        <div class="table-row--title">The Cradle:</div>
+                                        <div class="table-row--data"> Elevates barrel & breach.</div>
+                                    </div>
+                                    <div class="table-row" data-part="turret">
+                                        <div class="table-row--title">The Turret:</div>
+                                        <div class="table-row--data"> Contains the Automatic Loading System.</div>
+                                    </div>
+                                    <div class="table-row" data-part="gun">
+                                        <div class="table-row--title">The Gun:</div>
+                                        <div class="table-row--data"> Autoloading 155mm gun. Rate of fire 4–8 rounds
+                                            per minute. Range 40 km – 80 km.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-wrapper">
+                                <div class="dot" data-part="gun"></div>
+                                <div class="dot" data-part="turret"></div>
+                                <div class="dot" data-part="cab"></div>
+                                <div class="dot" data-part="barrel"></div>
+                                <div class="dot" data-part="stablelizer"></div>
+                                <div class="dot" data-part="stablelizer"></div>
+                                <img src="./assets/Cab.png" data-part="cab">
+                                <img src="./assets/Turret.png" data-part="turret">
+                                <img src="./assets/Stablelizer.png" data-part="stablelizer">
+                                <img src="./assets/Gun.png" data-part="gun">
+                                <img src="./assets/Barrel.png" data-part="barrel">
+                                <img class="active" src="./assets/Truck1.png" data-part="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content" data-content="sigma-operational-control-systems">
+                        <h1>Sigma Operational Control Systems</h1>
+                        <div class="content-wrapper">
+                            <div class="page-title">
+                                The FCS
+                                <div class="line"></div>
+                            </div>
+                            <div class="group">
+                                <p>The Elbit SIGMA 155mm Self Propelled Howitzer system employs a wide
+                                    range of Operational and Control Systems to support the crew. Among
+                                    them are:
+
+                                    Fire Control System (FCS) - Located at the gunner&#39;s position in the cab
+                                    and at the ammunition stations. The FCS performs the following
+                                    operations:
+                                    Operation of the system and execution of fire missions.
+                                    Communication and data transfer with the fire control system.
+
+                                    Elbit SIGMA 155mm Self Propelled Howitzer
+                                    General Overview, Maintenance Safety and Deployment Instructions
+                                    Monitoring and execution of the system&#39;s armament.
+
+                                    The CF 33 is a ruggedized Toughbook with 12.0&quot; LCD display and
+                                    touch screen. The CF 33 is used to operate and control the FCS.
+                                    The power is supplied from an external DC power source or from
+                                    internal rechargeable\ disposable batteries. The CF 33 is the
+                                    primary Gunner user interface through which the fire mission is
+                                    initiated and managed.</p>
+                                <figure>
+                                    <img src="./assets/sigma-operational-control-systems-image.png">
+                                    <figcaption>Figure 5 - CF 33 and Folding Keyboard</figcaption>
+                                </figure>
+                            </div>
+                            <div class="page-title">
+                                The C4I
+                                <div class="line"></div>
+                            </div>
+                            <div class="group">
+                                <p>
+                                    The C4i is located at the commander&#39;s position. It interfaces with the FCS
+                                    to transfer fire missions and commands. Additionally, the commander
+                                    monitors and manages the navigation routes and is in communication
+                                    with the other forces in the field.
+
+                                    Elbit SIGMA 155mm Self Propelled Howitzer
+                                    General Overview, Maintenance Safety and Deployment Instructions
+                                </p>
+                                <figure>
+                                    <img src="./assets/sigma-operational-control-systems-image-2.jpg">
+                                    <figcaption>Figure 6 - Positions of SIGMA Crew and their Systems</figcaption>
+                                </figure>
+                            </div>
+                            <div class="page-title" style="margin-bottom:5rem;">
+                                The Commander
+                                <div class=" line"></div>
+                            </div>
+                            <div class="group">
+                                <p>
+                                    The Commander operates the C4i system and is responsible for planning
+                                    the mission for each SIGMA gun per the designated fire mission
+                                </p>
+                                <div class="images-group">
+                                    <img src="./assets/sigma-operational-control-systems-image-3.png">
+                                    <img src="./assets/sigma-operational-control-systems-image-4.png">
+                                    <img src="./assets/sigma-operational-control-systems-image-5.png">
+                                    <img src="./assets/sigma-operational-control-systems-image-6.png">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="page-title" style="margin-bottom:5rem;">
+                                Fire Mission Execution
+                                <div class="line"></div>
+                            </div>
+                            <div class="group">
+                                <p>
+                                    Elbit SIGMA 155mm Self Propelled Howitzer
+                                    General Overview, Maintenance Safety and Deployment Instructions
+                                    Enter the Fire Mission provided by the C4I into the FCS. Once all
+                                    the information is entered and verified by the commander the
+                                    gunner may execute the firing procedure per the commander’s
+                                    instructions.
+                                </p>
+                                <br>
+                                <br>
+                                <div class="images-group">
+                                    <img src="./assets/sigma-operational-control-systems-image-7.png">
+                                    <img src="./assets/sigma-operational-control-systems-image-8.png">
+                                    <img src="./assets/sigma-operational-control-systems-image-9.png">
+                                    <img src="./assets/sigma-operational-control-systems-image-10.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content" data-content="sigma-cab-system-fire-functions">
+                        <h1>Cab System and Fire Functions</h1>
+                        <div class="content-wrapper">
+                            <div class="page-title" style="margin-bottom:5rem;">
+                                The SIGMA Gun Platform Cabin
+                                <div class="line"></div>
+                            </div>
+                            <div class="content-container">
+                                <div class="group">
+                                    <p>
+                                        The SIGMA Gun Platform Crew operates the gun entirely from the Cab, from
+                                        Driving to performing a fire mission to departure (“Shoot and Scoot”).
+                                        There systems are operated by a total of 3 functions
+
+                                        The Commander commands the SIGMA Gun Platform Gun Platform crew,
+                                        oversees the operational processes in the system in operational mode,
+                                        responsible for the operation of the C4i system.
+
+                                        The Gunner is responsible for operating the gun’s systems via the FCS
+                                        application, executes the fire missions and operates the various systems
+                                        per the commander’s instructions.
+
+                                        The Driver / Operational Platform Operator is responsible for Driving and
+                                        Operating the various driver assist systems of the SIGMA Gun Platform Truck,
+                                        including the CTIS (Central Tire Inflation System) and the ATI (Artillery
+                                        Turret Interface, which includes the Stabilizers, Travel Lock and Turret
+                                        Swivel).
+                                    </p>
+                                    <figure>
+                                        <img src="./assets/sigma-operational-control-systems-image-2.jpg">
+                                        <figcaption>Figure 6 - Positions of SIGMA Crew and their Systems</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content" data-content="sigma-deployment-fire-mission">
+                        <h1>Deployment & Fire Mission</h1>
+                        <div class="content-wrapper">
+                            <div class="content-container">
+                                <div class="page-title" style="margin-bottom: 5rem;">
+                                    Preliminary Steps
+                                    <div class="line"></div>
+                                </div>
+                                <div class="group">
+                                    <p>Prior to deploying the SIGMA Gun Platform system consult and follow all safety
+                                        guidelines as well as the specifics of the mission.
+                                        Place the SIGMA truck on a level surface, which can support the weight
+                                        of the truck, the pressure of the stabilizers and the recoil from the gun.
+                                    </p>
+                                    <figure>
+                                        <img src="./assets/sigma-deployment-fire-mission-image.jpg">
+                                        <figcaption>Figure 1 - SIGMA Gun Platform Deployed on Level Surface</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="group">
+                                    <p>
+                                        Engage the PTO and confirm that the hydraulic pressure is within the
+                                        normal range.
+                                    </p>
+                                    <figure>
+                                        <img src="./assets/sigma-deployment-fire-mission-image-2.png">
+                                        <figcaption>Figure 2 - Engage PTO to power up all the systems</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="page-title" style="margin-bottom: 5rem;">
+                                    Deployment
+                                    <div class="line"></div>
+                                </div>
+                                <div class="group">
+                                    <p>
+                                        Deploy all 4 stabilizers and confirm that they have extended, are securely
+                                        footed and that the SIGMA Gun Platform platform is level.
+                                    </p>
+                                    <figure>
+                                        <img src="./assets/sigma-deployment-fire-mission-image-3.png">
+                                        <figcaption>Figure 3 - Deploy Stabilizers and Confirm Solid Footing</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="group">
+                                    <p> Open the Travel Lock. Confirm that the barrel is free to move.
+                                        Travel Lock
+                                    </p>
+                                    <figure>
+                                        <img src="./assets/sigma-deployment-fire-mission-image-4.png">
+                                        <figcaption>Figure 4 - Release Travel Lock</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content" data-content="sigma-system">
+                        <h1>Introduction</h1>
+                        <div class="content-wrapper">
+                            <div class="page-title" style="margin-bottom: 5rem;">
+                                The SIGMA Gun Platform
+                                <div class="line"></div>
+                            </div>
+                            <div class="content-container">
+                                <p>
+                                    The SIGMA Gun Platform (Autonomous Truck Mounted howitzer System) is a 155 mm
+                                    Self-Propelled
+                                    AWD 10x10 truck mounted long range Howitzer gun system.
+
+                                    The system’s key attributes include quick, automated and sustainable firepower as
+                                    well
+                                    as mobility, operable in all terrain, rapid deployment (“Shoot and Scoot”
+                                    functionality)
+                                    and quick fire mission response time.
+
+                                    The SIGMA Gun Platform System is integrated with fully computerized systems,
+                                    including C4i,
+                                    FCS, GNSS, ILS, all of which provide automatic control, accurate navigation and
+                                    target
+                                    acquisition.
+
+                                    The Gun itself is fully automatic, from loading to firing to reloading. It supports
+                                    quick fire capabilities, ranging from 4–9 projectiles per minute, with ranges up to
+                                    40
+                                    km for standard ammunition and up to 80 km with extended range and guided
+                                    ammunition.
+                                    Each SIGMA Gun Platform carries a total of 40 rounds.
+                                </p>
+                                <div class="image-wrapper">
+                                    <img src="./assets/puls.png" alt="Puls Image" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content" data-content="safety-instructions">
+                        <h1>Safety Instructions</h1>
+                        <div class="content-wrapper">
+                            <div class="content-container">
+                                <div class="page-title">Mandatory Verbal Communication
+                                    <div class="line"></div>
+                                </div>
+                                <p>
+                                    Only trained crew members are allowed to operate the SIGMA system.
+                                    At any given drill, crew members are to be positioned at their working
+                                    posts.
+                                    Activation of each function below should be declared loudly verbally by
+                                    the crewmember performing each function:
+                                </p>
+                                <ul>
+                                    <li>“Hydraulics On”</li>
+                                    <li>“Traverse/ Elevation Movement”</li>
+                                    <li>“Loading System Active”</li>
+                                    <li>“Breech Close”</li>
+                                    <li>Engine On</li>
+                                    <li>Stabilizers Lowering/Lifting</li>
+                                    <li>Barrel Laying</li>
+                                    <li>Loader movement</li>
+                                    <li>SAS movement</li>
+                                    <li>ARM Switch On</li>
+                                </ul>
+                                <div class="page-title">
+                                    Motion Sectors Check
+                                    <div class="line"></div>
+                                </div>
+                                <p>
+                                    Before performing any motion in the GUN System –Motion sectors must
+                                    be free from obstacles- animals, persons, equipment.
+                                    No-one is allowed to be in any motion sector of the barrel while GUN
+                                    systems are active, and hydraulics are on.
+                                </p>
+                                <p>
+                                    combat drills, crew members at a minimum must wear:
+                                </p>
+                                <div class="icons">
+                                    <img src="./assets/icon1.svg">
+                                    <img src="./assets/icon2.svg">
+                                    <img src="./assets/icon3.svg">
+                                    <img src="./assets/icon4.svg">
+                                    <img src="./assets/icon5.svg">
+                                </div>
+                                <p>
+                                    Beware of heated surfaces during standard operation.
+                                    Any maintenance or operation on the SIGMA is to be conducted with
+                                    designated authorized tools only.
+                                </p>
+                                <div class="page-title">
+                                    Maintenance
+                                    <div class="line"></div>
+                                </div>
+                                <p>
+                                    Follow the pre- firing/ daily/ weekly/ during firing/ post- firing maintenance
+                                    and calibration procedures.
+                                    Use only approved fluids for use in the system- lubricants, fuel, etc.
+                                    Only qualified technicians should perform maintenance operations.
+                                </p>
+                                <div class="page-title">
+                                    Gun Movement Safety
+                                    <div class="line"></div>
+                                </div>
+                                <p>
+                                <ul class="no-bold">
+                                    <li>
+                                        When the system is in maintenance mode - safety mechanisms on
+                                        system motion are degraded and forbidden motion sectors are disabled,
+                                        any gun motion using manual controls or back-up should be executed
+                                        slowly and with extreme caution. An additional spotter is required.
+                                    </li>
+                                    <li>
+                                        Gun Hydraulic System Safety
+                                    </li>
+                                    <li>
+                                        Prior to hydraulic system maintenance, open the Accumulator lever
+                                        in order to reduce the oil pressure in the system.
+                                    </li>
+                                    <li>
+                                        Verify that the safety switch is turned off when the hydraulic system
+                                        is not used.
+                                    </li>
+                                    <li>
+                                        Before any maintenance activity on the hydraulic system, pipes or
+                                        hydraulic blocks, verify the hydraulic pressure relief valve is opened
+                                        and the work zone is clear of any foreign objects (such as dirt and
+                                        dust) that may enter the hydraulic system by mistake.
+                                    </li>
+                                    <li>
+                                        In an emergency, use the emergency stop button to stop all motion
+                                        and hydraulic supply.
+                                    </li>
+                                </ul>
+                                </p>
+
+                                <div class="page-title">
+                                    Stabilizer Safety
+                                    <div class="line"></div>
+                                </div>
+                                <ul class="no-bold">
+                                    <li>
+                                        Ensure the stabilizers are fully deployed prior to firing.
+                                    </li>
+                                    <li>
+                                        During the disengagement procedure, it is crucial to verify that the
+                                        barrel and automatic loading system are in travel lock position prior
+                                        to the retraction of the stabilizers in order to prevent damage to the
+                                        various systems.
+                                    </li>
+                                </ul>
+                                <div class="page-title">
+                                    Crew Cabin Safety
+                                    <div class="line"></div>
+                                </div>
+                                <ul class="no-bold">
+                                    <li>
+                                        No personnel are allowed to be in the cabin during firing testing.
+                                    </li>
+                                    <li>
+                                        Only certified drivers are allowed to drive the SIGMA.
+                                    </li>
+                                    <li>
+                                        During standard operation, before moving, ensure the barrel is
+                                        secured in the travel lock.
+                                    </li>
+                                    <li>
+                                        The crew shall be seated with safety belts fastened at all times
+                                        during vehicle movement.
+                                    </li>
+                                </ul>
+                                <div class="page-title">
+                                    FCS Operation and Maintenance
+                                    <div class="line"></div>
+                                </div>
+                                <ul class="no-bold">
+                                    <li>
+                                        System users must be qualified to operate specific platform
+                                        systems.
+                                    </li>
+                                    <li>
+                                        Users should be aware of all warnings, messages, system
+                                        indicators.
+                                    </li>
+                                    <li>
+                                        It is forbidden to break application protection mechanism and
+                                        access operating system files.
+                                    </li>
+                                    <li>
+                                        The user should be aware that erroneous inputs might cause wrong
+                                        system calculation output and must verify all inputs.
+                                    </li>
+                                    <li>
+                                        The operator must confirm all data entered manually into the
+                                        operating systems and notify the maintenance chief in case of any
+                                        safety issues.
+                                    </li>
+                                    <li>
+                                        Each time the platform location is changed, the emplacement/
+                                        displacement procedure shall be performed.
+                                    </li>
+                                    <li>
+                                        The user should be aware that delays might appear in receiving
+                                        messages and it is recommended, for critical message (such as:
+                                        Fire, check fire and cessation of loading) to be transferred also by
+                                        voice as a backup.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="content" data-content="sigma-system">
+                        <h1>Sigma System</h1>
+                        <div class="content-wrapper">
+                            <div class="content-container"></div>
+                            <p>testesteoskteostesokteoskteosijteqrwq</p>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="footer">
+                    <div class="footer--wrapper">
+                        <button>
+                            <svg width="11" height="15" viewBox="0 0 11 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" style="transform: scale(-1, 1);">
+                                <path
+                                    d="M3.03094 14.9999L10.0909 7.93893L3.03094 0.87793L0.908936 2.99993L5.84894 7.93893L0.908936 12.8779L3.03094 14.9999Z"
+                                    fill="black" />
+                            </svg>
+                            <span>Previous</span>
+                        </button>
+                        <div class="pages">1/2</div>
+                        <button>
+                            <span>Next</span>
+                            <svg width="11" height="15" viewBox="0 0 11 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.03094 14.9999L10.0909 7.93893L3.03094 0.87793L0.908936 2.99993L5.84894 7.93893L0.908936 12.8779L3.03094 14.9999Z"
+                                    fill="black" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src=" ./js/main.js"></script>
+</body>
+
+</html>
