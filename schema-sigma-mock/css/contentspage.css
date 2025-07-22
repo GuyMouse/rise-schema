@@ -421,8 +421,8 @@
   right: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: none;
 }
 .content[data-content=general-description] .content-wrapper .image-wrapper img.active {
@@ -620,9 +620,10 @@
 .table .table-row {
   display: grid;
   grid-template-columns: 1fr 3fr;
+  transition: background-color 0.2s linear;
 }
 .table .table-row.highlight {
-  background-color: red;
+  background-color: #bcd4f2;
 }
 .table .table-row--title {
   background-color: #f0f0f0;

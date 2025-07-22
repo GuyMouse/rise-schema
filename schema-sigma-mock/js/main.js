@@ -199,6 +199,12 @@ jQuery(function ($) {
     $rows.on('mouseleave', function () {
         resetHighlight();
     });
-
+    $('.home').each(function () {
+        if ($(this).find('a').length === 0) {
+            $(this).wrapInner('<a href="index.html"></a>');
+        } else {
+            $(this).find('a').attr('href', 'index.html');
+        }
+    });
 
 });

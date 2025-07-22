@@ -501,7 +501,7 @@
                 right: 0;
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
+                object-fit: contain;
                 display: none;
                 &.active {
                     display: block;
@@ -665,9 +665,9 @@
     .table-row {
         display: grid;
         grid-template-columns: 1fr 3fr;
-
+        transition: background-color 0.2s linear;
         &.highlight {
-            background-color: red;
+            background-color: #bcd4f2;
         }
 
         &--title {
