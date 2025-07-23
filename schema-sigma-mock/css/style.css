@@ -863,7 +863,7 @@ main .cover-page--wrapper:not(:has(.tree)) h1 {
   transition: background-color 0.2s linear;
 }
 .table .table-row.highlight {
-  background-color: #bcd4f2;
+  background-color: #ffecec;
 }
 .table .table-row--title {
   background-color: #f0f0f0;
